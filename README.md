@@ -9,7 +9,7 @@ This workflow was designed for use in the Microbial Ecology Group (MEG) at the U
 
 Step 1. DADA2 - Read DADA2.md
 
-Step 2. Curating - Read Excel_Formatting_1.md
+Step 2. Curating - Read Curating.md
 
 Step 3. Rarefaction - Read Rarefaction.md
 
