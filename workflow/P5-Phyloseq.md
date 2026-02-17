@@ -12,6 +12,8 @@ install.packages("patchwork")
 install.packages("agricolae")
 install.packages("FSA")
 install.packages("rcompanion")
+install.packages("knitr")
+intall.packages("microbiome")
 ```
 
 # Loading Packages
@@ -26,8 +28,8 @@ library("patchwork")
 library("agricolae")
 library("FSA")
 library("rcompanion")
-library(microbiome)
-library(knitr)
+library("microbiome")
+library("knitr")
 ```
 
 # Creating a Phyloseq Object
@@ -114,28 +116,28 @@ It should end up looking something like this (though hopefully with color, this 
 First we will do our Shannon Index, for the variable here, I chose Sex.
 
 ```R
-ShannonStats <- meta(physeq_obj)
+ ShannonStats <- meta(physeq_obj)
 
-ShannonStats$diversity <- alpha_div$Shannon
+ ShannonStats$diversity <- alpha_div$Shannon
 
-spl <- split(d$diversity, d$Sex)
+ spl <- split(d$diversity, d$Sex)
 
-ShannonStatsOutput <- t.test(spl$Female, spl$Male)$p.value
+ ShannonStatsOutput <- t.test(spl$Female, spl$Male)$p.value
 
-head(ShannonStatsOutput)
+ head(ShannonStatsOutput)
 ```
 Then we will proceed to do the same thing for Simpson.
 
 ```R
-> SimpsonStats <- meta(physeq_obj)
-> 
-> SimpsonStats$diversity <- alpha_div_filt$Simpson
-> 
-> spl <- split(d$diversity, d$Sex)
-> 
-> SimpsonStatsOutput <- t.test(spl$Female, spl$Male)$p.value
-> 
-> head(SimpsonStatsOutput)
+ SimpsonStats <- meta(physeq_obj)
+
+ SimpsonStats$diversity <- alpha_div_filt$Simpson
+ 
+ spl <- split(d$diversity, d$Sex)
+ 
+ SimpsonStatsOutput <- t.test(spl$Female, spl$Male)$p.value
+ 
+ head(SimpsonStatsOutput)
 ```
 
 # Beta Diversity in R-Studio
