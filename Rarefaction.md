@@ -26,8 +26,8 @@ cat training_summary.txt
 ```
 
 > [!IMPORTANT]
-> This will give you data on your ASVs and counts, from this data you will choose the minimum value  as the level to rarify at. You may use other 
-> methods, however this almost always works perfectly for me.
+> This will give you data on your ASVs and counts, from this data you will choose the minimum value as the level to rarefy at. You may use other methods, however this almost always 
+> works perfectly for me.
 
 ```shell
 single_rarefaction.py -i ASV.biom -o ASV_RAR.biom -d rarefaction_level # insert your minimum value here as the rarefaction level
@@ -37,19 +37,18 @@ biom convert -i ASV_RAR.biom -o ASV_RAR.txt --to-tsv --header-key taxonomy # con
 
 # Plotting Rarefaction Curve
 
-> You *CAN* stop here. However, it is best practice to be able to visualize your rarefaction curve, the rest of this tutorial illustrates how you may 
-> do so.
+You *CAN* stop here. However, it is best practice to be able to visualize your rarefaction curve, the rest of this tutorial illustrates how you may do so.
 
 ```shell
 alpha_rarefaction.py -i  ASV.biom -o RAR/ -m metadata.txt -e rarefaction_level
 ```
 
 > [!IMPORTANT]
-> From this command you should recieve an output folder (*RAR*) in your directory, open it to find four folders and a .txt file. Open the folder that 
-> is named "rarefaction". From here you will need a random number generator to generate a random number between 0 and 9. For this I prefer to go into 
-> excel and type in the first cell RANDBETWEEN(0, 9). Then go back to your rarefaction folder and selection every .biom file with that number at the 
+> From this command you should recieve an output folder `RAR/` in your directory, open it to find four folders and a `.txt` file. Open the folder that 
+> is named `rarefaction/`. From here you will need a random number generator to generate a random number between 0 and 9. For this I prefer to go into 
+> excel and type in the first cell `=RANDBETWEEN(0, 9)`. Then go back to your `rarefaction/` folder and selection every `.biom` file with that number at the 
 > end of the filename. Move these files into a seperate folder, as these are the randomly selected values we will use to plot our rarefaction curve in 
-> excel. I like to name this folder "RAR_*the number randomly generated*", such as Rar_0 or Rar_6. In this example I am using Rar_3.
+> excel. I like to name this folder `RAR_<the number randomly generated>/`, such as `Rar_0/` or `Rar_6/`. In this example I am using `Rar_3/`.
 
 ```shell
 alpha_diversity.py -i RAR_3/ -m chao1 -o ADIV/
@@ -57,6 +56,6 @@ alpha_diversity.py -i RAR_3/ -m chao1 -o ADIV/
 collate_alpha.py -i ADIV/ -o collated_alpha/
 ```
 
-Open the collated_alpha folder that is now in your directory and you should find a file named chao1.txt this is what you can use to plot the rarefaction curve in excel. It may take some configuring, however, it should look something like this:
+Open the `collated_alpha/` folder that is now in your directory and you should find a file named `chao1.txt` this is what you can use to plot the rarefaction curve in excel. It may take some configuring, however, it should look something like this:
 
 ![alt text](images/rarefaction_example.png)
