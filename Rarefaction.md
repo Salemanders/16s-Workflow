@@ -1,6 +1,6 @@
 # RAREFACTION WORKFLOW
 
-A rarefaction workflow designed for my 16s workflow project developed working under a fantastic professor at my soon-to-be Alma Mater. This section of the workflow is meant to come after the DADA2 Pipeline and curation steps.
+This section of the workflow is meant to come after the DADA2 Pipeline and curation steps.
 
 This workflow was developed in [Swan](https://swan.unl.edu/), a bash terminal I had access to from the Holand Computing Center. However, this tutorial may be followed in any bash termal with access to the needed programs: QIIME v1.9, Python v3.3, and biom-format.
 
