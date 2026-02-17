@@ -58,4 +58,4 @@ collate_alpha.py -i ADIV/ -o collated_alpha/
 
 Open the `collated_alpha/` folder that is now in your directory and you should find a file named `chao1.txt` this is what you can use to plot the rarefaction curve in excel. It may take some configuring, however, it should look something like this:
 
-![alt text](images/rarefaction_example.png)
+![alt text](../images/rarefaction_example.png)
