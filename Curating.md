@@ -52,7 +52,7 @@ Now after using the `CTRL-A` shortcut, hit the `Close` button.
 
 Now right-click on the cell highlighted and select `Delete...`
 
-![alt text](image.png)
+![alt text](images/Curating_11.png)
 
 Then select  `Entire row` and hit `OK`
 
@@ -71,7 +71,7 @@ Now repeat this process for variables other than `NA;NA;NA;NA;NA;NA`, these incl
 
 # ASV IDs
 
-Last thing remaining is to go to cell `A1` and type `#OTU ID` and hit enter. Then go to cell `A2` and type ASV_1 and drag down till you hit the bottom, your table should look something like this:
+Last thing remaining is to go to cell `A1` and type `#OTU ID` and hit enter. Then go to cell `A2` and type `ASV_1` and drag down till you hit the bottom, your table should look something like this:
 
 ![alt text](images/Curating_13.png)
 
