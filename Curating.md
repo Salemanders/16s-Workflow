@@ -15,7 +15,7 @@ We are going to merge these two tables into one, singular table that is usable i
 
 Now type `taxonomy` into cell `H1`. And type `=TEXTJOIN(";", TRUE, A2:F2)` into cell `H2`, this combines all taxonomic ranks. Drag down to repeat the `TEXTJOIN` command till you reach the bottom.
 
-[!Important]
+>[!Important]
 > Syntax is very important in a lot of these workflows. For example, in later processes, putting `Taxonomy` instead of `taxonomy` in H1 will lead to biom-format not cooperating.
 
 ![alt text](images/Curating_4.png)
@@ -28,7 +28,7 @@ Now you have successfully merged the DADA2 output. You may save and close the `t
 
 # Curating
 
-[!Important]
+>[!Important]
 > Include data on everything that you curated out in this step. That includes categories removed as well as how much.
 
 Select all of your taxonomy column (for me this is column EK, I have a lot of samples in my example) then click `Find & Select` underneath `Home` in Excel.
@@ -43,7 +43,7 @@ Then use the shortcut `CTRL-A` to select all the unidentified taxa.
 
 ![alt text](images/Curating_8.png)
 
-[!Tip]
+>[!Tip]
 > These following steps in particular may very based on your version of Excel, reach out to either Dr Ayayee or myself for troubleshooting
 
 Now after using the `CTRL-A` shortcut, hit the `Close` button.
@@ -60,7 +60,7 @@ Then select  `Entire row` and hit `OK`
 
 Now all of the rows containing a cell with `NA;NA;NA;NA;NA;NA` should have been removed.
 
-[!Tip]
+>[!Tip]
 > To double-check this you may use the `Find & Select` tool again
 
 Now repeat this process for variables other than `NA;NA;NA;NA;NA;NA`, these include the following:
