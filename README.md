@@ -4,7 +4,7 @@ This workflow was designed for use in the Microbial Ecology Group (MEG) at the U
 
 # Workflow Steps
 
-[!Important]
+> [!Important]
 > This is the proper sequence that you should follow!
 
 Step 1. DADA2 - Read DADA2.md
