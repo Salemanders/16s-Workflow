@@ -20,3 +20,6 @@ Step 5. Phyloseq - Read
 Step 6. Differential Abundance - Read
 
 Step 7. FAPROTAX - Read
+
+> [!Warning]
+> Overhaul will be done in the near future to Steps 2, 4, and 6 as to make using Excel obsolete except for in graphing. :)
