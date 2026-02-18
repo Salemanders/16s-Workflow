@@ -176,7 +176,7 @@ If p<0.05, then the results are statistically significant. Which means we will m
 
 ```R
 result <- pairwise_adonis(bray_dist, 
-                 sample_frame$time, 
+                 sample_frame$VARIABLE, 
                  metadata = sample_frame,
                  p.adjust.method = "none", 
                  perm = 999)
