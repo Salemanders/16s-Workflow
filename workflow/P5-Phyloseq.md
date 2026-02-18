@@ -5,15 +5,15 @@
 You will want to install the following packages, if already installed, you may move onto the next step.
 
 ```R
-install.packages("vegan")
 BiocManager::install("phyloseq")
+install.packages("vegan")
 install.packages("tidyverse")
 install.packages("patchwork")
 install.packages("agricolae")
 install.packages("FSA")
 install.packages("rcompanion")
 install.packages("knitr")
-intall.packages("microbiome")
+install.packages("microbiome")
 ```
 
 # Loading Packages
@@ -141,3 +141,46 @@ Then we will proceed to do the same thing for Simpson.
 ```
 
 # Beta Diversity in R-Studio
+
+Now we will begin our beta diversity analysis, which is the diversity between samples. First, we will calculate the beta diversity:
+
+```R
+bray <- ordinate(
+     physeq = physeq_obj,
+     method = "NMDS",
+     distance = "bray"
+ )
+```
+Then we will plot our beta diversity
+
+```R
+plot_ordination(physeq_obj, bray, color = "VARIABLE") + 
+     geom_point(size=4) + 
+     stat_ellipse(aes(group=VARIABLE, fill=VARIABLE), geom = "polygon", alpha = 0.2) +
+
+     labs(
+     title = "NMDS of Microbial Communities by VARIABLE",
+     subtitle = "Bray–Curtis distance")
+```
+
+# Beta Diversity Statistics
+
+First we calculate whether or not the results of the bray-curtis distance plot are statistically significant.
+
+```R
+bray_dist <- phyloseq::distance(physeq_obj, method = "bray")
+permanova <- adonis2(bray_dist ~ VARIABLE, data = meta, permutations = 999)
+permanova
+```
+If p<0.05, then the results are statistically significant. Which means we will move forward with a pairwise test for significance.
+
+```R
+result <- pairwise_adonis(bray_dist, 
+                 sample_frame$time, 
+                 metadata = sample_frame,
+                 p.adjust.method = "none", 
+                 perm = 999)
+write.csv(result, file="result.csv")
+```
+
+This allows us to see which groups are significantly different from other groups. That should be all you need to do now in R. The rest of this tutorial will continue in bash powershell (SWAN).
