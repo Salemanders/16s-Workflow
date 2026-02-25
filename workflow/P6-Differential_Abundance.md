@@ -45,9 +45,16 @@ Now what you are going to do is select all of `column A`  go to the `Data` tab u
 ![alt text](../images/DA_2.png)
 
 You are going to select `Delimited` and click `Next`, then select `Tab` as your delimiter and click `Next`, and finally keep `General` selected and click `Finish`. 
+
+
+
 ![alt text](../images/DA_3.png)
+
 ![alt text](../images/DA_4.png)
+
 ![alt text](../images/DA_5.png)
+
+
 
 The result should look like this:
 ![alt text](../images/DA_6.png)
@@ -141,7 +148,7 @@ Double click the chart you just made and go into the `Chart Design` tab. From th
 
 ![alt text](../images/DA_Results.png)
 
-> [!Hint]
+> [!Tip]
 > Go to the `Page Layout` tab and change your color theme to have more access to some better color 
 > palletes!
 
