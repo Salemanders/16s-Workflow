@@ -77,7 +77,7 @@ Now open the `Func_Div_Stat.csv` file we just created in Excel.
 
 ![alt text](../images/FT_5.png)
 
-For this data we will be performing the same steps we did excel for [Part 6](P6-Differential_Abundance.md#Excel) of our workflow, if you need reminding you cna go back to that section, otherwise here are the sparknotes:
+For this data we will be performing the same steps we did excel for [Part 6](P6-Differential_Abundance.md#Excel) of our workflow, if you need reminding you can go back to that section, otherwise here are the sparknotes:
 
 1. Text to Columns
 2. Choose a Statistical Method
