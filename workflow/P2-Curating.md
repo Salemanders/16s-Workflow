@@ -18,7 +18,7 @@ We are going to merge these two tables into one, singular table that is usable i
 
 Now type `taxonomy` into cell `H1`. And type `=TEXTJOIN(";", TRUE, A2:F2)` into cell `H2`, this combines all taxonomic ranks. Drag down to repeat the `TEXTJOIN` command till you reach the bottom.
 
->[!Important]
+> [!Important]
 > Syntax is very important in a lot of these workflows. For example, in later processes, putting `Taxonomy` instead of `taxonomy` in H1 will lead to biom-format not cooperating.
 
 ![alt text](../images/Curating_4.png)

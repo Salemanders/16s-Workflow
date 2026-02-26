@@ -1,4 +1,4 @@
-# Faprotax
+# FAPROTAX
 
 Welcome to the final step of this workflow! In this section we will be using the package/database known as [FAPROTAX](http://www.loucalab.com/archive/FAPROTAX/lib/php/index.php?section=Home) in our bash shell to calculate our functional diversity, which we will use Excel to graph. What we mean by functional diversity is the composition of the functional groups in a microbiome. A functional group is composed of species that perform similar roles within an ecosystem (occupy the same/similar niches).
 

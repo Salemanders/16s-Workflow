@@ -1,4 +1,4 @@
-# Differential Abundance
+# DIFFERENTIAL ABUNDANCE
 
 Differential abundance analysis is an important component of many research studies within microbial ecology. Here we will be identifying statistically significant taxa within our dataset. These taxa identified will be those that are driving the results we saw in our alpha and beta diversity analysis. This step will involve the use of a Bash shell and Excel. 
 
